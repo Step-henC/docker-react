@@ -11,7 +11,7 @@ script: #commands to run test suite
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1b"
+  region: "us-east-1"
   app: "frontend"
   env: "Frontend-env"
   bucket_name: "elasticbeanstalk-us-east-1-381492306175"

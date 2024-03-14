@@ -12,6 +12,13 @@ RUN npm run build
 # multistep process avoids bulky node_modules and source code
 
 FROM nginx
+
+#need to expose for elasticbeanstalk
+#does nothing for us as developer
+#just informs dev on what port to map
+#but elasticbeanstalk uses it to port map
+EXPOSE 80 
+
 COPY --from=builder /app/build /usr/share/nginx/html
 
 # remember nginx uses port 80

@@ -11,7 +11,7 @@ script: #commands to run test suite
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "us-east-1b"
   app: "frontend"
   env: "Frontend-env"
   bucket_name: "elasticbeanstalk-us-east-1-381492306175"
@@ -19,4 +19,4 @@ deploy:
   on:
     branch: master
   access_key_id: "$AWS_FRONTEND_KEY"
-  secret_access_key: "$AWS_FRONTEND_SECRET"
+  secret_access_key: "$AWS_FRONTEND_SECRET" #added aws cli keys/secret to travis settings
